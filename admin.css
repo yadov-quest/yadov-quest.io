@@ -1,0 +1,410 @@
+/* Стили для панели администратора */
+.admin-body {
+    background-color: #1a1a2e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Убедимся, что весь контент можно прокручивать */
+    overflow-y: auto; 
+}
+
+.admin-header {
+    background-color: #162447;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#connection-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.status-connected {
+    background-color: #2ecc71;
+}
+
+.status-disconnected {
+    background-color: #e74c3c;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Убедимся, что контейнер не ограничивает прокрутку */
+    height: auto; 
+}
+
+.admin-section {
+    background-color: #162447;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #4cc9f0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #4361ee;
+    padding-bottom: 8px;
+}
+
+.preview-container {
+    margin-bottom: 20px;
+}
+
+.preview {
+    transform: scale(0.8);
+    transform-origin: top center;
+}
+
+.admin-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-settings, .heroes-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.team-setting, .hero-input, .image-setting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.team-setting label, .hero-input label, .image-setting label {
+    min-width: 180px;
+    font-weight: bold;
+}
+
+.team-setting input, .hero-input input, .image-setting input, .image-setting select {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #4361ee;
+    border-radius: 4px;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.team-heroes {
+    margin-bottom: 15px;
+}
+
+.team-heroes h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #4cc9f0;
+    font-size: 1.1rem;
+}
+
+.hero-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4361ee;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #3a56d4;
+}
+
+.action-button.primary {
+    background-color: #4cc9f0;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+}
+
+.action-button.primary:hover {
+    background-color: #3db8e0;
+}
+
+.action-button.warning {
+    background-color: #e74c3c;
+}
+
+.action-button.warning:hover {
+    background-color: #c0392b;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Стиль для уведомлений */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4cc9f0;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* Стили для секции управления драфтом в админ-панели */
+
+.draft-control-section {
+    margin-bottom: 20px;
+}
+
+.draft-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #1a1a2e;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.draft-phase-display {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 30px;
+    background-color: #333;
+    transition: background 0.3s ease;
+}
+
+.draft-phase-blue {
+    background: linear-gradient(90deg, #162447, #4cc9f0);
+}
+
+.draft-phase-red {
+    background: linear-gradient(90deg, #162447, #f72585);
+}
+
+.draft-timer-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 8px 15px;
+    background-color: #162447;
+    border-radius: 5px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.draft-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.draft-buttons button {
+    flex: 1;
+}
+
+/* Стили для подсветки активных слотов в админке */
+.admin-section .hero-input.active-input label,
+.admin-section .hero-input.active-input input {
+    color: #4cc9f0;
+    border-color: #4cc9f0;
+    box-shadow: 0 0 5px rgba(76, 201, 240, 0.5);
+}
+
+.admin-section .hero-input.active-input-red label,
+.admin-section .hero-input.active-input-red input {
+    color: #f72585;
+    border-color: #f72585;
+    box-shadow: 0 0 5px rgba(247, 37, 133, 0.5);
+}
+
+.admin-section .hero-input.active-input::before,
+.admin-section .hero-input.active-input-red::before {
+    content: '→';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.admin-section .hero-input.active-input::before {
+    color: #4cc9f0;
+}
+
+.admin-section .hero-input.active-input-red::before {
+    color: #f72585;
+}
+
+.admin-section .hero-input {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Стиль для отображения двойного пика */
+.draft-double-pick {
+    background-color: rgba(76, 201, 240, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #4cc9f0;
+    margin-bottom: 10px;
+}
+
+.draft-double-pick-red {
+    background-color: rgba(247, 37, 133, 0.2);
+    border: 1px dashed #f72585;
+}
+
+/* Стили для кнопки следующего шага */
+#next-step {
+    background-color: #3db4e0;
+}
+
+#next-step:hover {
+    background-color: #2d9ec8;
+}
+
+/* Стиль для таймера при истечении времени */
+.draft-timer-warning {
+    color: #ffcc00;
+}
+
+.draft-timer-critical {
+    color: #ff4444;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Стиль для завершенного слота */
+.hero-input.completed input,
+.hero-input.completed label {
+    opacity: 0.7;
+}
+
+.hero-input.completed::after {
+    content: '✓';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* Анимация для активного слота в админке */
+@keyframes highlightInput {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(76, 201, 240, 0.15); }
+    100% { background-color: transparent; }
+}
+
+.hero-input.active-input,
+.hero-input.active-input-red {
+    animation: highlightInput 2s infinite;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Стили для предпросмотра с отображением активных слотов */
+.preview .active-slot {
+    position: relative;
+    z-index: 5;
+}
+
+.preview .active-slot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #4cc9f0;
+    border-radius: 8px;
+    animation: activeSlotGlow 1.5s infinite;
+    z-index: -1;
+}
+
+.preview .red-team .active-slot::before {
+    border-color: #f72585;
+}
+
+/* Адаптивность */
+@media (min-width: 992px) {
+    .admin-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .admin-section {
+        flex: 1;
+    }
+
+    .admin-controls {
+        flex: 2;
+    }
+}
+
+@media (max-width: 991px) {
+    .team-setting, .hero-input, .image-setting {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team-setting label, .hero-input label, .image-setting label {
+        margin-bottom: 5px;
+    }
+
+    .team-setting input, .hero-input input, .image-setting input, .image-setting select {
+        width: 100%;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}

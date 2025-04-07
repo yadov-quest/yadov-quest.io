@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Draft Overlay - Зрительский режим</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="draft-animation.css">
+</head>
+<body>
+    <div class="overlay-container viewer-mode">
+        <div class="teams-container">
+            <div class="team blue-team">
+                <div class="team-header">
+                    <div class="team-logo-container">
+                        <input type="file" id="blue-team-logo-input" accept="image/*" style="display:none;">
+                        <img src="Logo.png" id="blue-team-logo" class="team-logo" alt="Blue Team Logo">
+                    </div>
+                    <h2 class="team-name" id="blue-team-name">СИНЯЯ КОМАНДА</h2>
+                </div>
+                
+                <!-- Баны синей команды -->
+                <div class="bans-container" id="blue-bans-container">
+                    <div class="ban-slot" id="blue-ban-1">
+                        <div class="ban-img-container">
+                            <img src="/api/placeholder/120/120" alt="Ban 1" class="ban-img">
+                            <div class="ban-overlay">
+                                <div class="ban-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ban-slot" id="blue-ban-2">
+                        <div class="ban-img-container">
+                            <img src="/api/placeholder/120/120" alt="Ban 2" class="ban-img">
+                            <div class="ban-overlay">
+                                <div class="ban-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ban-slot" id="blue-ban-3">
+                        <div class="ban-img-container">
+                            <img src="/api/placeholder/120/120" alt="Ban 3" class="ban-img">
+                            <div class="ban-overlay">
+                                <div class="ban-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Герои синей команды -->
+                <div class="heroes-container">
+                    <div class="hero-slot" id="blue-hero-1">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 1" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 1</div>
+                    </div>
+                    <div class="hero-slot" id="blue-hero-2">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 2" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 2</div>
+                    </div>
+                    <div class="hero-slot" id="blue-hero-3">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 3" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 3</div>
+                    </div>
+                    <div class="hero-slot" id="blue-hero-4">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 4" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 4</div>
+                    </div>
+                    <div class="hero-slot" id="blue-hero-5">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 5" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 5</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vs-container">
+                <div class="vs-text">VS</div>
+            </div>
+            
+            <div class="team red-team">
+                <div class="team-header">
+                    <div class="team-logo-container">
+                        <input type="file" id="blue-team-logo-input" accept="image/*" style="display:none;">
+                        <img src="Logo.png" id="blue-team-logo" class="team-logo" alt="Blue Team Logo">
+                    </div>
+                    <h2 class="team-name" id="red-team-name">КРАСНАЯ КОМАНДА</h2>
+                </div>
+                
+                <!-- Баны красной команды -->
+                <div class="bans-container" id="red-bans-container">
+                    <div class="ban-slot" id="red-ban-1">
+                        <div class="ban-img-container">
+                            <img src="/api/placeholder/120/120" alt="Ban 1" class="ban-img">
+                            <div class="ban-overlay">
+                                <div class="ban-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ban-slot" id="red-ban-2">
+                        <div class="ban-img-container">
+                            <img src="/api/placeholder/120/120" alt="Ban 2" class="ban-img">
+                            <div class="ban-overlay">
+                                <div class="ban-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ban-slot" id="red-ban-3">
+                        <div class="ban-img-container">
+                            <img src="/api/placeholder/120/120" alt="Ban 3" class="ban-img">
+                            <div class="ban-overlay">
+                                <div class="ban-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Герои красной команды -->
+                <div class="heroes-container">
+                    <div class="hero-slot" id="red-hero-1">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 1" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 1</div>
+                    </div>
+                    <div class="hero-slot" id="red-hero-2">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 2" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 2</div>
+                    </div>
+                    <div class="hero-slot" id="red-hero-3">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 3" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 3</div>
+                    </div>
+                    <div class="hero-slot" id="red-hero-4">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 4" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 4</div>
+                    </div>
+                    <div class="hero-slot" id="red-hero-5">
+                        <div class="hero-img-container">
+                            <img src="placeholder.png" alt="Hero 5" class="hero-img">
+                        </div>
+                        <div class="hero-name">Герой 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="viewer.js"></script>
+    <script src="draft-animation.js"></script>
+</body>
+</html>
